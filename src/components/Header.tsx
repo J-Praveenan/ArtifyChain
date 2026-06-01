@@ -2,7 +2,13 @@
 
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import WalletConnect from "./WalletConnect";
+
+// In Header.tsx, replace the WalletConnect import with:
+import dynamic from "next/dynamic";
+
+const WalletConnect = dynamic(() => import("./WalletConnect"), {
+  ssr: false,
+});
 
 type SectionKey =
   | "home"
