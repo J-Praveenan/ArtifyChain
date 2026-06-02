@@ -98,7 +98,7 @@ export default function AssetsSection() {
       <section id="assets" className="scroll-mt-28 py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <p className="text-sm font-semibold uppercase tracking-wide text-indigo-600">
+            <p className="inline-flex rounded-full bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-600 ring-1 ring-indigo-200">
               My Collection
             </p>
 

@@ -70,7 +70,7 @@ export default function VerifyOwnershipSection() {
     <>
       <section id="verify" className="scroll-mt-28 py-20">
         <div className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-wide text-indigo-600">
+          <p className="inline-flex rounded-full bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-600 ring-1 ring-indigo-200">
             Verify Ownership
           </p>
 

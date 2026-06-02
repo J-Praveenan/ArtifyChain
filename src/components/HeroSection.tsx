@@ -30,15 +30,9 @@ export default function HeroSection({
           <span className="text-indigo-600">Cardano Blockchain</span>
         </h1>
 
-        <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-          Transform your ideas into stunning AI-generated artwork, store them
-          securely on IPFS, mint them as Cardano NFTs, and verify ownership
-          transparently on the blockchain.
-        </p>
-
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <button
-            onClick={() => scrollToSection("hero")}
+            onClick={() => scrollToSection("generate")}
             className="rounded-2xl bg-indigo-600 px-7 py-4 text-sm font-semibold text-white transition hover:bg-indigo-700"
           >
             Create Artwork

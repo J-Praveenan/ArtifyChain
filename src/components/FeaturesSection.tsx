@@ -47,7 +47,7 @@ export default function FeaturesSection() {
     <section id="functionalities" className="bg-white py-20">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center">
-          <p className="text-sm font-semibold uppercase tracking-wide text-indigo-600">
+          <p className="inline-flex rounded-full bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-600 ring-1 ring-indigo-200">
             Features
           </p>
 
