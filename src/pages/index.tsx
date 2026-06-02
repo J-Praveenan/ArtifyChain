@@ -6,6 +6,7 @@ import HeroSection from "@/components/HeroSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import Footer from "@/components/Footer";
+import GenerateSection from "@/components/GenerateSection";
 
 
 type SectionKey =
@@ -52,6 +53,7 @@ export default function Home() {
 
         <section ref={homeRef} id="home" className="scroll-mt-28">
           <HeroSection scrollToSection={scrollToSection} />
+          <GenerateSection/>
         </section>
 
         <section

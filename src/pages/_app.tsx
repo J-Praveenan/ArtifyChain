@@ -1,3 +1,4 @@
+import AppToast from "@/components/utils/AppToast";
 import "@/styles/globals.css";
 import "@meshsdk/react/styles.css";
 import type { AppProps } from "next/app";
@@ -12,6 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <MeshProvider>
       <Component {...pageProps} />
+      <AppToast />
     </MeshProvider>
   );
 }
