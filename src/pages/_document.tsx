@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <link rel="icon" href="https://meshjs.dev/favicon/favicon-32x32.png" />
+        <link rel="icon" href="https://www.shutterstock.com/image-vector/generate-ai-artificial-intelligence-logo-600nw-2492648973.jpg" />
       </Head>
       <body>
         <Main />
