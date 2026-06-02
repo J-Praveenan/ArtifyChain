@@ -203,8 +203,9 @@ export default function VerifyOwnershipSection() {
 
       {selectedImage && (
         <div className="fixed inset-0 z-[999] flex items-center justify-center bg-slate-950/80 p-3 backdrop-blur-sm sm:p-6">
-          <div className="relative flex max-h-[94vh] w-full max-w-6xl flex-col overflow-hidden rounded-3xl bg-white shadow-2xl">
-            <div className="flex items-center justify-between border-b border-slate-200 bg-white px-5 py-4">
+          <div className="relative flex max-h-[90vh] w-full max-w-6xl flex-col overflow-hidden rounded-3xl bg-white shadow-2xl">
+            
+            <div className="shrink-0 flex items-center justify-between border-b border-slate-200 bg-white px-5 py-4">
               <div className="min-w-0">
                 <h3 className="truncate text-lg font-black text-slate-900 sm:text-xl">
                   {selectedImage.name}
@@ -216,23 +217,25 @@ export default function VerifyOwnershipSection() {
 
               <button
                 onClick={() => setSelectedImage(null)}
-                className="ml-4 flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 text-slate-700 transition hover:bg-red-100 hover:text-red-600"
+                className="ml-4 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-700 transition hover:bg-red-100 hover:text-red-600"
               >
                 <X size={20} />
               </button>
             </div>
 
-            <div className="flex flex-1 items-center justify-center bg-gradient-to-br from-slate-50 to-indigo-50 p-4 sm:p-6">
-              <div className="relative flex max-h-[70vh] w-full items-center justify-center overflow-hidden rounded-3xl border border-slate-200 bg-white p-3 shadow-sm">
+          
+            <div className="min-h-0 flex-1 overflow-auto bg-gradient-to-br from-slate-50 to-indigo-50 p-4 sm:p-6">
+              <div className="flex min-h-[320px] items-center justify-center rounded-3xl border border-slate-200 bg-white p-3 shadow-sm">
                 <img
                   src={selectedImage.image}
                   alt={selectedImage.name}
-                  className="max-h-[66vh] w-full rounded-2xl object-contain"
+                  className="max-h-[55vh] w-full rounded-2xl object-contain"
                 />
               </div>
             </div>
 
-            <div className="flex flex-col gap-4 border-t border-slate-200 bg-white px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
+            
+            <div className="shrink-0 flex flex-col gap-4 border-t border-slate-200 bg-white px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
               <div className="min-w-0">
                 <p className="text-sm font-semibold text-slate-900">
                   Blockchain verified artwork
