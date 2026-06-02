@@ -50,6 +50,7 @@ export default async function handler(
       mediaType: metadata.mediaType || "",
       fingerprint: asset.fingerprint,
       quantity: asset.quantity,
+      initialMintTxHash: asset.initial_mint_tx_hash,
     });
   } catch (error) {
     console.error("Get asset details error:", error);

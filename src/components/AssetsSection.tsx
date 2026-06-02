@@ -214,7 +214,7 @@ export default function AssetsSection() {
 
                   <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
                     <a
-                      href={`https://preprod.cardanoscan.io/token/${asset.unit}`}
+                      href={`https://preprod.cardanoscan.io/transaction/${asset.initialMintTxHash}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-center gap-2 rounded-xl bg-slate-900 px-4 py-3 text-sm font-semibold text-white transition hover:bg-indigo-600"

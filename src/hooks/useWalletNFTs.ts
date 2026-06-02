@@ -10,6 +10,7 @@ export type WalletNFT = {
   image?: string;
   description?: string;
   fingerprint?: string;
+  initialMintTxHash?: string;
 };
 
 export function useWalletNFTs() {
