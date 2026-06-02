@@ -1,21 +1,69 @@
 "use client";
 
+import Image from "next/image";
 import {
   WandSparkles,
-  ShieldCheck,
   Coins,
+  Database,
+  Boxes,
+  Wallet,
 } from "lucide-react";
+
+const platformLinks = [
+  { label: "Create Artwork", href: "#generate" },
+  { label: "How It Works", href: "#how-it-works" },
+  { label: "Features", href: "#functionalities" },
+  { label: "Verify NFT", href: "#verify" },
+  { label: "My Collection", href: "#assets" },
+];
+
+const technologyLinks = [
+  {
+    label: "Cardano",
+    href: "https://cardano.org/",
+    icon: Coins,
+  },
+  {
+    label: "MeshJS",
+    href: "https://meshjs.dev/",
+    icon: Wallet,
+  },
+  {
+    label: "Next.js",
+    href: "https://nextjs.org/",
+    icon: WandSparkles,
+  },
+  {
+    label: "Pinata IPFS",
+    href: "https://www.pinata.cloud/",
+    icon: Boxes,
+  },
+  {
+    label: "Blockfrost",
+    href: "https://blockfrost.io/",
+    icon: Database,
+  },
+];
 
 export default function Footer() {
   return (
     <footer className="bg-slate-900 text-white">
       <div className="mx-auto max-w-7xl px-6 py-14">
         <div className="grid gap-10 md:grid-cols-4">
+          
+          {/* Brand Section */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-4">
+              <Image
+                src="/artify-chain-logo.png"
+                alt="ArtifyChain Logo"
+                width={80}
+                height={80}
+                className="rounded-2xl object-contain"
+              />
 
               <div>
-                <h2 className="text-xl font-bold">
+                <h2 className="text-2xl font-bold">
                   ArtifyChain
                 </h2>
 
@@ -33,45 +81,57 @@ export default function Footer() {
             </p>
           </div>
 
+          {/* Platform Links */}
           <div>
             <h3 className="mb-4 font-semibold text-white">
               Platform
             </h3>
 
             <ul className="space-y-3 text-sm text-slate-400">
-              <li>AI Artwork Generation</li>
-              <li>IPFS Decentralized Storage</li>
-              <li>Cardano NFT Minting</li>
-              <li>NFT Ownership Verification</li>
+              {platformLinks.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    className="transition hover:text-indigo-400"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
+          {/* Technology Links */}
           <div>
             <h3 className="mb-4 font-semibold text-white">
               Technologies
             </h3>
 
             <div className="space-y-3 text-sm text-slate-400">
-              <div className="flex items-center gap-2">
-                <WandSparkles className="h-4 w-4 text-indigo-400" />
-                AI Image Generation
-              </div>
+              {technologyLinks.map((link) => {
+                const Icon = link.icon;
 
-              <div className="flex items-center gap-2">
-                <Coins className="h-4 w-4 text-indigo-400" />
-                Cardano Blockchain
-              </div>
+                return (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 transition hover:text-indigo-400"
+                  >
+                    <Icon className="h-4 w-4 text-indigo-400" />
+                    {link.label}
+                  </a>
+                );
+              })}
 
-              <div className="flex items-center gap-2">
-                <ShieldCheck className="h-4 w-4 text-indigo-400" />
-                Ownership Verification
-              </div>
             </div>
           </div>
         </div>
 
         <div className="mt-12 border-t border-slate-800 pt-6 text-center text-sm text-slate-500">
-          © 2026 ArtifyChain. Built with AI, IPFS, and Cardano Blockchain.
+          © 2026 ArtifyChain. Built with AI, IPFS, Cardano, Blockfrost, and
+          Next.js.
         </div>
       </div>
     </footer>

@@ -3,7 +3,8 @@
 import { WandSparkles } from "lucide-react";
 
 type SectionKey =
-  | "home"
+  | "hero"
+  | "generate"
   | "how-it-works"
   | "functionalities"
   | "verify"
@@ -37,7 +38,7 @@ export default function HeroSection({
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <button
-            onClick={() => scrollToSection("home")}
+            onClick={() => scrollToSection("hero")}
             className="rounded-2xl bg-indigo-600 px-7 py-4 text-sm font-semibold text-white transition hover:bg-indigo-700"
           >
             Create Artwork

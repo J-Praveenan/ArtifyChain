@@ -507,25 +507,29 @@ export default function GenerateSection() {
         </section>
 
         {showImageModal && imageUrl && (
-        <div className="fixed inset-0 z-[999] flex items-center justify-center bg-black/80 p-3 sm:p-6">
-            <div className="relative flex max-h-[92vh] w-full max-w-5xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl sm:rounded-3xl">
-            <button
-                onClick={() => setShowImageModal(false)}
-                className="absolute right-3 top-3 z-20 rounded-full bg-black/70 p-2 text-white transition hover:bg-black sm:right-4 sm:top-4"
-            >
-                <X size={22} />
-            </button>
+            <div className="fixed inset-0 z-[999] flex items-center justify-center bg-slate-950/80 p-3 backdrop-blur-sm sm:p-6">
+                <div className="relative flex max-h-[94vh] w-full max-w-6xl flex-col overflow-hidden rounded-3xl bg-white shadow-2xl">
 
-            <div className="flex max-h-[75vh] items-center justify-center bg-slate-50 p-3 sm:p-4">
-                <img
-                src={imageUrl}
-                alt={artName || "Generated artwork"}
-                className="max-h-[72vh] w-full rounded-2xl object-contain"
-                />
+                <button
+                    onClick={() => setShowImageModal(false)}
+                    className="absolute right-4 top-4 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 text-slate-700 transition hover:bg-red-100 hover:text-red-600"
+                >
+                    <X size={20} />
+                </button>
+
+                <div className="flex flex-1 items-center justify-center bg-gradient-to-br from-slate-50 to-indigo-50 p-4 sm:p-6">
+                    <div className="relative flex max-h-[70vh] w-full items-center justify-center overflow-hidden rounded-3xl border border-slate-200 bg-white p-3 shadow-sm">
+                    <img
+                        src={imageUrl}
+                        alt={artName || "Generated artwork"}
+                        className="max-h-[66vh] w-full rounded-2xl object-contain"
+                    />
+                    </div>
+                </div>
+
+                </div>
             </div>
-            </div>
-        </div>
-        )}
+            )}
     </>
     );
 }

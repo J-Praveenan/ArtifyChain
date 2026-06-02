@@ -3,33 +3,36 @@ import { useRef } from "react";
 
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import HowItWorksSection from "@/components/HowItWorksSection";
-import FeaturesSection from "@/components/FeaturesSection";
-import Footer from "@/components/Footer";
 import GenerateSection from "@/components/GenerateSection";
 import VerifyOwnershipSection from "@/components/VerifyOwnershipSection";
-
+import HowItWorksSection from "@/components/HowItWorksSection";
+import FeaturesSection from "@/components/FeaturesSection";
+import AssetsSection from "@/components/AssetsSection";
+import Footer from "@/components/Footer";
 
 type SectionKey =
-  | "home"
+  | "hero"
+  | "generate"
   | "how-it-works"
   | "functionalities"
   | "verify"
   | "assets";
 
 export default function Home() {
-  const homeRef = useRef<HTMLDivElement>(null);
+  const heroRef = useRef<HTMLDivElement>(null);
+  const generateRef = useRef<HTMLDivElement>(null);
+  const verifyRef = useRef<HTMLDivElement>(null);
   const howItWorksRef = useRef<HTMLDivElement>(null);
   const functionalitiesRef = useRef<HTMLDivElement>(null);
-  const verifyRef = useRef<HTMLDivElement>(null);
   const assetsRef = useRef<HTMLDivElement>(null);
 
   const scrollToSection = (section: SectionKey) => {
     const refs = {
-      home: homeRef,
+      hero: heroRef,
+      generate: generateRef,
+      verify: verifyRef,
       "how-it-works": howItWorksRef,
       functionalities: functionalitiesRef,
-      verify: verifyRef,
       assets: assetsRef,
     };
 
@@ -52,24 +55,19 @@ export default function Home() {
       <main className="min-h-screen bg-white text-slate-900">
         <Header scrollToSection={scrollToSection} />
 
-        <section ref={homeRef} id="home" className="scroll-mt-28">
+        <section ref={heroRef} id="hero" className="scroll-mt-28">
           <HeroSection scrollToSection={scrollToSection} />
-          <GenerateSection/>
         </section>
 
-        <section
-          ref={verifyRef}
-          id="verify"
-          className="scroll-mt-28"
-        >
+        <section ref={generateRef} id="generate" className="scroll-mt-28">
+          <GenerateSection />
+        </section>
+
+        <section ref={verifyRef} id="verify" className="scroll-mt-28">
           <VerifyOwnershipSection />
         </section>
 
-        <section
-          ref={howItWorksRef}
-          id="how-it-works"
-          className="scroll-mt-28"
-        >
+        <section ref={howItWorksRef} id="how-it-works" className="scroll-mt-28">
           <HowItWorksSection />
         </section>
 
@@ -79,6 +77,10 @@ export default function Home() {
           className="scroll-mt-28"
         >
           <FeaturesSection />
+        </section>
+
+        <section ref={assetsRef} id="assets" className="scroll-mt-28">
+          <AssetsSection />
         </section>
 
         <Footer />

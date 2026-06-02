@@ -2,8 +2,8 @@
 
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 
-// In Header.tsx, replace the WalletConnect import with:
 import dynamic from "next/dynamic";
 
 const WalletConnect = dynamic(() => import("./WalletConnect"), {
@@ -11,7 +11,8 @@ const WalletConnect = dynamic(() => import("./WalletConnect"), {
 });
 
 type SectionKey =
-  | "home"
+  | "hero"
+  | "generate"
   | "how-it-works"
   | "functionalities"
   | "verify"
@@ -22,7 +23,7 @@ type HeaderProps = {
 };
 
 const navItems = [
-  { label: "Create Artwork", value: "home" },
+  { label: "Create Artwork", value: "generate" },
   { label: "How It Works", value: "how-it-works" },
   { label: "Features", value: "functionalities" },
   { label: "Verify NFT", value: "verify" },
@@ -32,7 +33,7 @@ const navItems = [
 export default function Header({ scrollToSection }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] =
-    useState<SectionKey>("home");
+    useState<SectionKey>("hero");
 
   const handleClick = (section: SectionKey) => {
     setActiveSection(section);
@@ -44,9 +45,17 @@ export default function Header({ scrollToSection }: HeaderProps) {
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-xl">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
         <button
-          onClick={() => handleClick("home")}
+          onClick={() => handleClick("hero")}
           className="flex items-center gap-3 text-left"
         >
+          <Image
+            src="/artify-chain-logo.png"
+            alt="ArtifyChain Logo"
+            width={80}
+            height={80}
+            className="rounded-xl object-contain"
+            priority
+          />
 
           <div>
             <h1 className="text-xl font-black text-slate-900">
