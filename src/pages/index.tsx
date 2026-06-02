@@ -7,6 +7,7 @@ import HowItWorksSection from "@/components/HowItWorksSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import Footer from "@/components/Footer";
 import GenerateSection from "@/components/GenerateSection";
+import VerifyOwnershipSection from "@/components/VerifyOwnershipSection";
 
 
 type SectionKey =
@@ -54,6 +55,14 @@ export default function Home() {
         <section ref={homeRef} id="home" className="scroll-mt-28">
           <HeroSection scrollToSection={scrollToSection} />
           <GenerateSection/>
+        </section>
+
+        <section
+          ref={verifyRef}
+          id="verify"
+          className="scroll-mt-28"
+        >
+          <VerifyOwnershipSection />
         </section>
 
         <section
