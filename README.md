@@ -1,37 +1,82 @@
-# Starter Next.js TypeScript
+# 🎨 ArtifyChain
 
-Start a new project on Next.js. This starter template consists of a connect wallet button and wallet integration.
-      
-## Getting Started
+**AI-Powered NFT Art Generation and Minting Platform on Cardano**
 
-Start project locally using CLI:
+ArtifyChain is a modern Web3 application that allows users to generate AI artwork, upload it to IPFS, and mint it as a Cardano NFT. It combines **Artificial Intelligence**, **Blockchain**, and **Decentralized Storage** to create a secure and creative NFT experience.
 
-```bash
-npx meshjs app-name
-```
+---
 
-## Learn More
+## 🚀 Live Demo
 
-### [APIs](https://meshjs.dev/apis)
+🔗 **Website:** https://artify-chain-five.vercel.app/
 
-From wallet integrations to transaction builders, Mesh makes Web3 development easy with reliable, scalable, and well-engineered APIs & developer tools.
+---
 
-### [Guides](https://meshjs.dev/guides)
+## ✨ Features
 
-Whether you are new to web development or a seasoned blockchain full-stack developer, these guides will help you get started.
+- 🤖 AI-powered image generation from text prompts
+- 🎨 Create unique digital artwork
+- 🌐 Upload artwork to IPFS using Pinata
+- 🪙 Mint NFTs on the Cardano blockchain
+- 👛 Connect Cardano wallets
+- 🔐 Store NFT metadata securely
+- 📄 Verify NFT ownership and asset details
+- ⚡ Fast and responsive user experience
+- 📱 Fully responsive modern UI
+- 🧾 Blockchain-based proof of ownership
 
-### [Smart Contracts](https://meshjs.dev/smart-contracts)
+---
 
-Open-source smart contracts, complete with documentation, live demos, and end-to-end source code.
+## 🛠️ Tech Stack
 
-### [React components and hooks](https://meshjs.dev/react)
+| Technology | Purpose |
+|----------|---------|
+| ⚛️ Next.js | Frontend framework |
+| 🟦 TypeScript | Type-safe development |
+| 🎨 Tailwind CSS | UI styling |
+| ⛓️ Cardano | Blockchain network |
+| 🧩 MeshJS | Cardano wallet and transaction handling |
+| 🌉 Blockfrost | Cardano blockchain API |
+| 📦 IPFS | Decentralized file storage |
+| 📌 Pinata | IPFS upload service |
+| ☁️ Cloudflare Worker | AI image generation service |
+| 🤖 AI Image API | Generate artwork from prompts |
 
-Frontend components for wallet connections, and useful React hooks to getting wallet states - Mesh provides everything you need to bring your Web3 user interface to life.
+---
 
-## Connect with us
+## 📌 Main Functionalities
 
-Give a star on our [GitHub](https://meshjs.dev/go/github) to stay up to date with our latest developments.
+### 🤖 1. Generate AI Artwork
 
-Follow us on [Twitter](https://meshjs.dev/go/twitter) for updates.
+Users can enter a text prompt and generate unique digital artwork using AI.
 
-Join our [Discord](https://meshjs.dev/go/discord) for any questions and suggestions.
+### 🌐 2. Upload Artwork to IPFS
+
+Generated artwork is uploaded to IPFS through Pinata, ensuring decentralized storage.
+
+### 🪙 3. Mint Cardano NFT
+
+Users can mint the generated artwork as a Cardano NFT with metadata.
+
+### 🔎 4. Verify NFT Details
+
+Users can verify minted NFT details, metadata, and ownership on the blockchain.
+
+---
+
+## 🧠 How It Works
+
+```text
+1. Connect Cardano Wallet
+        ↓
+2. Enter Creative Prompt
+        ↓
+3. Generate AI Artwork
+        ↓
+4. Upload Image to IPFS
+        ↓
+5. Create NFT Metadata
+        ↓
+6. Mint NFT on Cardano
+        ↓
+7. Verify Ownership
